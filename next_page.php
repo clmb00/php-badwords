@@ -3,7 +3,7 @@
     $paragraph = $_POST['paragraph'];
     $blocked_word = $_POST['blocked_word'];
 
-    $censored_para = str_replace($blocked_word, '***', $paragraph);
+    $censored_para = str_ireplace(trim($blocked_word), '***', $paragraph);
 
 ?>
 
@@ -32,9 +32,13 @@
 
   <hr>
 
-  <h2>Il paragrafo senza la parola "<?php echo "<span>$blocked_word</span>"?>" è:</h2>
+  <h2>Il paragrafo senza la parola <?php echo "<span>'$blocked_word'</span>"?> è:</h2>
   <p><?php echo $censored_para ?></p>
   <h4>La nuova lunghezza è di <?php echo strlen($censored_para) . ' caratteri.'?></h4>
+
+  <hr>
+
+  <a href="./index.php">Clicca qui per tornare indietro.</a>
   
 </body>
 </html>

@@ -23,7 +23,7 @@
     <label for="paragraph_id">Inserisci il testo: </label>
     <textarea name="paragraph" id="paragraph_id" cols="50" rows="10"></textarea>
     <label for="blocked_word_id">Inserisci la parola da censurare: </label>
-    <input type="text" name="blocked_word" id="blocked_word_id">
+    <input type="text" name="blocked_word" id="blocked_word_id" placeholder="Lorem">
     <button type="submit">Prosegui</button>
   </form>
   
